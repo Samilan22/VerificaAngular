@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <p>
+      {{saluto}}
+</p>
+<p *ngIf="booleano">
+  questo è il mio numero: {{numero}} 
+</p>
+<input type="radio" id=""  [checked]="booleano">{{booleano}}
+<br><br>
+<button class="btn bg-primary text-white" (click)="changeBoolean()">Mostra</button>
+
+<p> Questo è un saluto </p>
+
+<ul>
+  <li *ngFor="let vet of nomi">{{vet}}</li>
+</ul>
+<div id="heyla">
+  <p (event)="setDataFromBody($event)"></p>
+</div>
+
+</div>
