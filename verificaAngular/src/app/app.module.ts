@@ -6,21 +6,20 @@ import { HeaderComponent } from './header/header.component';
 import { Persona } from './model/model';
 import { ContextService } from './context.service';
 import { BodyComponent } from './body/body.component';
-import { MessageComponent } from './message/message.component';
-
-
+import { ServiziomessaggiService } from './serviziomessaggi.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    MessageComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [ContextService, MessageComponent],
+  providers: [ContextService, ServiziomessaggiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

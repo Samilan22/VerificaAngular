@@ -1,6 +1,12 @@
 <div class="jumbotron">
+    <p>Hey, hai <span class="badge badge-danger" *ngIf="notifica">{{notifica}}</span> notifiche</p>
+    <p>Hey, hai <span class="badge badge-danger" *ngIf="post">{{post}}</span> Post</p>
+    <p>Hey, hai <span class="badge badge-danger" *ngIf="commenti">{{commenti}}</span> Commenti</p>
+    <p>Hey, hai <span class="badge badge-danger" *ngIf="album">{{album}}</span> Album</p>
+    <p>Hey, hai <span class="badge badge-danger" *ngIf="foto">{{foto}}</span> Foto</p>
+  
   <p>
-      {{saluto}}
+      {{saluto}}  
 </p>
 <p *ngIf="booleano">
   questo è il mio numero: {{numero}} 
@@ -9,7 +15,9 @@
 <br><br>
 <button class="btn bg-primary text-white" (click)="changeBoolean()">Mostra</button>
 
-<p> Questo è un saluto </p>
+
+<!--Div messaggio -->
+
 
 <ul>
   <li *ngFor="let vet of nomi">{{vet}}</li>
@@ -18,4 +26,3 @@
   <p (event)="setDataFromBody($event)"></p>
 </div>
 
-</div>

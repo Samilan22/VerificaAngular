@@ -1,8 +1,14 @@
-<div>
+<div class="bg-danger jumbotron">
 <p>
   {{nome}}
 </p>
-
+<div>
+    <h2>Messaggi</h2>
+  
+   <div *ngFor="let message of messages"><p>{{messages}}</p></div>
+   <button class="btn btn-warning" (click)="clear()">Clear</button>
+    
+  </div>
 
 <button type="submit" (click)='sendToHeader()' class="btn bg-success text-white">Manda un saluto all'header</button>
 </div>
